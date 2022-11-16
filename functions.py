@@ -6,9 +6,14 @@
 # convert the length to the correct unit
 # output the answer to the user
 
-user_number = input("What number to convert? ")
+user_number = float(input("What number to convert? "))
 user_unit = input("What unit is your number?" )
 
+# to convert in to mm --> in x 25.4
+# to convert mm to in --> mm / 25.4
 
-print(user_number)
+# user gives in unit
+converted_number = user_number * 25.4
+
+print(converted_number)
 print(user_unit)
