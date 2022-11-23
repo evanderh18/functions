@@ -27,6 +27,11 @@ def user_parser(user_input):
 
     return number, unit
 
+def print_results(user_number, user_unit, conv_number, conv_unit):
+    
+    result = ("{:.2f} {} is equal to {:.2f} {}")
+    print(result.format (user_number, user_unit, conv_number, conv_unit))
+
 while True: # continue program until user exits
     while True: # check for valid data
         user_input = input("number and unit to convert ")
@@ -47,7 +52,11 @@ while True: # continue program until user exits
         #perform ft to in
         converted_number = user_number * 12
         conv_unit = 'in'
-    print(converted_number, conv_unit)
+    # Create a function that prints out the answer formatted to 2
+    # Give the original number and unit and conv number and unit
+    # 12.00 ft is equal to 144.0 in
+    
+    print_results(user_number, user_unit, converted_number, conv_unit)
 
 
 
